@@ -1,19 +1,5 @@
 local plugins = {
     {
-        "jackMort/ChatGPT.nvim",
-        event = "VeryLazy",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
-        },
-        config = function ()
-            require("chatgpt").setup({
-                api_key_cmd = "echo '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'",
-            })
-        end,
-    },
-    {
         "mfussenegger/nvim-dap",
         config = function (_, opts)
             require("core.utils").load_mappings("dap")
@@ -67,7 +53,8 @@ local plugins = {
                 "ruff",
                 "mypy",
                 "black",
-                "debugpy"
+                "debugpy",
+                "rust-analyzer"
             }
         }
     },
